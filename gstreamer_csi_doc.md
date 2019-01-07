@@ -18,7 +18,4 @@ def open_onboard_camera(device_number, width, height):
 ```
 
 reference
-- [https://developer.ridgerun.com/wiki/index.php?title=Gstreamer_pipelines_for_Jetson_TX2](https://developer.ridgerun.com/wiki/index.php?title=Gstreamer_pipelines_for_Jetson_TX2)
-- [https://blog.csdn.net/csdnhuaong/article/details/80172296](https://blog.csdn.net/csdnhuaong/article/details/80172296)
-
-
+[]()
