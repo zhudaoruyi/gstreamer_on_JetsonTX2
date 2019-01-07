@@ -1,5 +1,7 @@
 # Usage of gstreamer on jetson TX2
 
+### Terminal command to show camera output
+
 ```bash
 gst-launch-1.0 nvcamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM), width=(int)1280, height=(int)720, format=(string)I420, framerate=(fraction)30/1' ! nvvidconv flip-method=2 ! 'video/x-raw(memory:NVMM), format=(string)I420' ! nvoverlaysink -e   # terminal command to show camera output
 ```
@@ -10,6 +12,8 @@ gst-launch-1.0 nvcamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM), width=(int)1
 `sensor-id=2` > camera 2 
 
 `sensor-id=3` > camera 3 
+
+### Usage in OpenCV
 
 ```python
 nvcamerasrc sensor-id=0 ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720, format=(string)I420, framerate=(fraction)30/1 ! nvvidconv ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink  # usage in OpenCV
